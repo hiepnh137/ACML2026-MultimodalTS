@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ACML 2026 tutorial: Advances in Multi-Modal Time Series — From Forecasting to Reasoning." />
+  <meta name="theme-color" content="#171238" />
+  <title>Advances in Multi-Modal Time Series | ACML 2026 Tutorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Tutorial home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" role="img">
+            <path d="M3 23c6-12 11 12 18 0s11 12 18 0" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+            <circle cx="9" cy="13" r="3" fill="currentColor" opacity=".85"/>
+            <circle cx="31" cy="10" r="3" fill="currentColor" opacity=".55"/>
+          </svg>
+        </span>
+        <span>MMTS @ ACML 2026</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#program">Program</a>
+        <a href="#hands-on">Hands-on</a>
+        <a href="#presenters">Presenters</a>
+        <a href="#materials">Materials</a>
+        <a href="#venue">Venue</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+        <svg class="hero-wave" viewBox="0 0 1500 500" preserveAspectRatio="none">
+          <path d="M-40,300 C110,85 220,440 360,220 C500,0 620,430 770,190 C900,-15 1030,410 1170,180 C1300,-25 1425,350 1540,120" />
+          <path class="wave-2" d="M-20,390 C130,210 245,480 390,320 C530,165 670,450 810,290 C950,130 1085,430 1230,270 C1370,115 1460,330 1540,230" />
+        </svg>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span> ACML 2026 Tutorial · Half Day · 150 min</div>
+          <h1>Advances in <span>Multi-Modal Time Series</span></h1>
+          <p class="hero-subtitle">From Forecasting to Reasoning</p>
+          <p class="hero-intro">A practical tutorial on combining temporal signals with text and other modalities—covering forecasting architectures, cross-modal fusion, language-model reasoning, question answering, and time-series foundation models.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#program">View program</a>
+            <a class="btn secondary" href="#materials">Tutorial materials</a>
+          </div>
+          <div class="event-strip">
+            <div><strong>01 Dec 2026</strong><span>Tutorial day</span></div>
+            <div><strong>Melbourne, Australia</strong><span>ACML 2026</span></div>
+            <div><strong>RMIT Building 80</strong><span>Room / time TBA</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal delay-1" aria-label="Conceptual illustration of multimodal time-series learning">
+          <div class="visual-card">
+            <div class="visual-topline"><span>multimodal pipeline</span><span class="status">ACML ’26</span></div>
+            <div class="modality-row">
+              <div class="modality time"><span class="icon">∿</span><b>Time series</b><small>signals</small></div>
+              <div class="plus">+</div>
+              <div class="modality text"><span class="icon">Aa</span><b>Text</b><small>context</small></div>
+              <div class="plus">+</div>
+              <div class="modality event"><span class="icon">◇</span><b>Events</b><small>metadata</small></div>
+            </div>
+            <div class="fusion-stage">
+              <div class="chip">Alignment</div><div class="chip">Fusion</div><div class="chip">Foundation models</div>
+            </div>
+            <div class="output-grid">
+              <div><span>01</span><b>Forecasting</b><small>predict future values</small></div>
+              <div><span>02</span><b>Reasoning</b><small>interpret temporal evidence</small></div>
+              <div><span>03</span><b>Question answering</b><small>interact in natural language</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="section-heading reveal">
+          <span class="kicker">About the tutorial</span>
+          <h2>One field map, from neural forecasting to large-model reasoning.</h2>
+        </div>
+        <div class="prose reveal delay-1">
+          <p>Time-series data is fundamental to prediction and decision-making, but real-world temporal signals increasingly arrive with complementary context such as text, images, and event logs. This richer setting creates new opportunities—and new problems in alignment, heterogeneity, noise, scalability, and evaluation.</p>
+          <p>This tutorial gives a structured view of recent multi-modal time-series learning. We move from problem formulation and fusion mechanisms to pretrained language models, question answering, and foundation models, with two guided hands-on sessions designed to be runnable in Google Colab.</p>
+        </div>
+      </div>
+      <div class="container topic-grid">
+        <article class="topic-card reveal"><span>01</span><h3>Problem & challenges</h3><p>Tasks, temporal alignment, missing/noisy data, modality heterogeneity, benchmarks and evaluation.</p></article>
+        <article class="topic-card reveal delay-1"><span>02</span><h3>Multi-modal forecasting</h3><p>Sequence backbones plus late, auxiliary-variable and frequency-domain fusion strategies.</p></article>
+        <article class="topic-card reveal delay-2"><span>03</span><h3>Reasoning & QA</h3><p>Adapting pretrained language and vision-language models for temporal reasoning and natural-language interaction.</p></article>
+        <article class="topic-card reveal delay-3"><span>04</span><h3>Foundation models</h3><p>Numerical TSFMs and multimodal foundation models that integrate time series and text at scale.</p></article>
+      </div>
+    </section>
+
+    <section class="section soft" id="program">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="kicker">Detailed program</span>
+          <h2>150 minutes, lecture + practice</h2>
+          <p>The final clock times will be added when ACML publishes the room allocation.</p>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item"><div class="time-badge">10 min</div><div class="timeline-body"><span class="part-label intro">Opening</span><h3>Introduction & Overview</h3><p>Fundamentals, what makes a time series multi-modal, recent trends, use cases, and the tutorial roadmap.</p><div class="owner">Lead: Hung Le</div></div></div>
+          <div class="timeline-item"><div class="time-badge">15 min</div><div class="timeline-body"><span class="part-label">Part 1</span><h3>Problem Definition & Emerging Challenges</h3><p>Forecasting, reasoning and question answering; alignment, missingness, noisy context, heterogeneity and scalability; representative benchmarks including Time-MMD and Time-MQA.</p><div class="owner">Lead: Hiep Nguyen</div></div></div>
+          <div class="timeline-item"><div class="time-badge">25 min</div><div class="timeline-body"><span class="part-label">Part 2</span><h3>Multi-Modal Forecasting with Deep Neural Networks</h3><p>Patch-based and time-frequency backbones; late fusion, auxiliary-variable alignment and frequency-domain fusion.</p><div class="owner">Lead: Hiep Nguyen</div></div></div>
+          <div class="timeline-item accent"><div class="time-badge">15 min</div><div class="timeline-body"><span class="part-label hands">Hands-on 1</span><h3>Build a Paired Time-Series + Text Forecasting Pipeline</h3><p>A guided Colab workflow from paired data to training, evaluation and interpretation.</p><div class="owner">Lead: Hiep Nguyen</div></div></div>
+          <div class="timeline-item break"><div class="time-badge">20 min</div><div class="timeline-body"><span class="part-label break-label">Break</span><h3>Coffee & discussion</h3><p>Time to compare notes and discuss individual research problems.</p></div></div>
+          <div class="timeline-item"><div class="time-badge">20 min</div><div class="timeline-body"><span class="part-label">Part 3</span><h3>Multi-Modal Reasoning & Question Answering</h3><p>Pretrained language and vision-language models for temporal tasks, unified QA frameworks, and current limitations of LLM-based time-series reasoning.</p><div class="owner">Lead: Van Dai Do</div></div></div>
+          <div class="timeline-item"><div class="time-badge">20 min</div><div class="timeline-body"><span class="part-label">Part 4</span><h3>Scaling with Foundation Models</h3><p>Numerical foundation models such as TimesFM and Chronos, followed by multimodal foundation models with unified tokenization or cross-attention.</p><div class="owner">Lead: Van Dai Do</div></div></div>
+          <div class="timeline-item accent"><div class="time-badge">10 min</div><div class="timeline-body"><span class="part-label hands">Hands-on 2</span><h3>Large Models for Forecasting & QA</h3><p>A guided demo using large pretrained models on simple forecasting and question-answering examples.</p><div class="owner">Lead: Van Dai Do</div></div></div>
+          <div class="timeline-item"><div class="time-badge">15 min</div><div class="timeline-body"><span class="part-label intro">Closing</span><h3>Wrap-Up & Q&amp;A</h3><p>Key concepts, open challenges, future directions, and audience questions.</p><div class="owner">Lead: Hung Le</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hands-on">
+      <div class="container">
+        <div class="section-heading reveal"><span class="kicker">Hands-on sessions</span><h2>Designed to run in Colab—no local setup.</h2></div>
+        <div class="labs-grid">
+          <article class="lab-card reveal">
+            <div class="lab-num">01</div>
+            <div><span class="tag">Forecasting</span><h3>Paired numerical + textual forecasting</h3><p>Load a paired dataset, preprocess numerical and textual inputs, train a compact multi-modal forecasting model, evaluate it, and inspect the value of contextual information.</p><div class="lab-meta"><span>15 min guided session</span><span>PyTorch · Colab</span></div></div>
+          </article>
+          <article class="lab-card reveal delay-1">
+            <div class="lab-num">02</div>
+            <div><span class="tag">Large models</span><h3>Forecasting + question answering</h3><p>Use pretrained models to solve simple time-series forecasting and natural-language QA examples, then adapt the workflow to new datasets and research questions.</p><div class="lab-meta"><span>10 min guided demo</span><span>Foundation models · Colab</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="outcomes">
+      <div class="container outcomes-wrap">
+        <div class="section-heading reveal"><span class="kicker">Learning outcomes</span><h2>What you should leave with</h2></div>
+        <div class="outcome-list">
+          <div class="outcome reveal"><span>✓</span><p><strong>Formalize multi-modal time-series tasks</strong> and explain the core challenges in alignment, heterogeneity, scalability and evaluation.</p></div>
+          <div class="outcome reveal delay-1"><span>✓</span><p><strong>Select appropriate forecasting strategies</strong>, including late, auxiliary-variable and frequency-domain fusion with modern sequence backbones.</p></div>
+          <div class="outcome reveal delay-2"><span>✓</span><p><strong>Understand foundation-model integration</strong> across temporal and textual modalities, including the trade-offs of numerical and multimodal pretraining.</p></div>
+          <div class="outcome reveal delay-3"><span>✓</span><p><strong>Reuse the notebooks</strong> as starting points for your own datasets and research questions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="presenters">
+      <div class="container">
+        <div class="section-heading centered reveal"><span class="kicker">Presenters</span><h2>Deakin Applied AI Initiative (A2I2)</h2><p>Three presenters covering forecasting, reasoning, and foundation models.</p></div>
+        <div class="speaker-grid">
+          <article class="speaker-card reveal">
+            <div class="avatar avatar-hl">HL</div>
+            <h3>Dr. Hung Le</h3><p class="speaker-role">ARC DECRA Fellow · Senior Lecturer</p><p>Researches deep learning, reinforcement learning and multi-modal AI, with recent work spanning multimodal time-series forecasting and large-model reasoning.</p>
+            <div class="speaker-links"><a href="https://thaihungle.github.io/" target="_blank" rel="noreferrer">Profile ↗</a><span>Introduction · Q&amp;A</span></div>
+          </article>
+          <article class="speaker-card reveal delay-1">
+            <div class="avatar avatar-hn">HN</div>
+            <h3>Hiep Nguyen</h3><p class="speaker-role">PhD Student</p><p>Works on multi-modal time-series forecasting, including frequency-aware text fusion and retrieval-augmented forecasting.</p>
+            <div class="speaker-links"><a href="https://github.com/hiepnh137" target="_blank" rel="noreferrer">GitHub ↗</a><span>Parts 1–2 · Hands-on 1</span></div>
+          </article>
+          <article class="speaker-card reveal delay-2">
+            <div class="avatar avatar-vd">VD</div>
+            <h3>Van Dai Do</h3><p class="speaker-role">Associate Research Fellow</p><p>Works on foundation models, language-model adaptation, reasoning and multi-modal forecasting.</p>
+            <div class="speaker-links"><a href="https://davido111200.github.io/" target="_blank" rel="noreferrer">Profile ↗</a><span>Parts 3–4 · Hands-on 2</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="materials">
+      <div class="container">
+        <div class="section-heading reveal"><span class="kicker">Tutorial materials</span><h2>Slides, notebooks & resources</h2><p>These cards are ready for your final links. Replace the placeholder URLs when the material is released.</p></div>
+        <div class="material-grid">
+          <a class="material-card disabled" href="#" aria-disabled="true"><span class="material-icon">▤</span><div><h3>Full tutorial slides</h3><p>PDF · coming soon</p></div><span>→</span></a>
+          <a class="material-card disabled" href="#" aria-disabled="true"><span class="material-icon">⌘</span><div><h3>Hands-on 1 notebook</h3><p>Google Colab · coming soon</p></div><span>→</span></a>
+          <a class="material-card disabled" href="#" aria-disabled="true"><span class="material-icon">⌘</span><div><h3>Hands-on 2 notebook</h3><p>Google Colab · coming soon</p></div><span>→</span></a>
+          <a class="material-card" href="#references"><span class="material-icon">↗</span><div><h3>Reading list</h3><p>Key papers covered in the tutorial</p></div><span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="venue">
+      <div class="container venue-grid">
+        <div class="venue-copy reveal">
+          <span class="kicker">Venue</span><h2>ACML 2026 · Melbourne</h2>
+          <p class="venue-lead">Tutorials are scheduled for <strong>1 December 2026</strong> at RMIT University’s Swanston Academic Building (Building 80), in Melbourne’s CBD.</p>
+          <dl class="venue-details"><div><dt>Address</dt><dd>445 Swanston Street, Melbourne VIC 3000, Australia</dd></div><div><dt>Session</dt><dd>Half-day tutorial · 150 minutes</dd></div><div><dt>Room & start time</dt><dd>To be announced by ACML 2026</dd></div></dl>
+          <a class="text-link" href="https://www.acml-conf.org/2026/venues/venue/" target="_blank" rel="noreferrer">Official venue information ↗</a>
+        </div>
+        <div class="venue-card reveal delay-1">
+          <div class="venue-graphic"><span class="building">80</span><div class="skyline"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="venue-card-bottom"><small>RMIT UNIVERSITY</small><strong>Swanston Academic Building</strong><span>Melbourne, Australia</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references" id="references">
+      <div class="container">
+        <div class="section-heading reveal"><span class="kicker">Selected references</span><h2>Core reading covered by the tutorial</h2></div>
+        <ol class="ref-list reveal">
+          <li>Liu et al. <em>Time-MMD: Multi-Domain Multimodal Dataset for Time Series Analysis.</em> NeurIPS, 2024.</li>
+          <li>Nie et al. <em>A Time Series is Worth 64 Words: Long-term Forecasting with Transformers.</em> ICLR, 2023.</li>
+          <li>Wu et al. <em>TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis.</em> ICLR, 2023.</li>
+          <li>Li et al. <em>Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative.</em> ICLR, 2026.</li>
+          <li>Nguyen et al. <em>Spectral Text Fusion: A Frequency-Aware Approach to Multimodal Time-Series Forecasting.</em> AISTATS, 2026.</li>
+          <li>Zhong et al. <em>Time-VLM: Exploring Multimodal Vision-Language Models for Augmented Time Series Forecasting.</em> ICML, 2025.</li>
+          <li>Kong et al. <em>Time-MQA: Time Series Multi-Task Question Answering with Context Enhancement.</em> ACL, 2025.</li>
+          <li>Merrill et al. <em>Language Models Still Struggle to Zero-shot Reason about Time Series.</em> Findings of EMNLP, 2024.</li>
+          <li>Das et al. <em>A Decoder-Only Foundation Model for Time-Series Forecasting.</em> ICML, 2024.</li>
+          <li>Ansari et al. <em>Chronos: Learning the Language of Time Series.</em> TMLR, 2024.</li>
+          <li>Wang et al. <em>ChatTime: A Unified Multimodal Time Series Foundation Model Bridging Numerical and Textual Data.</em> AAAI, 2025.</li>
+          <li>Langer et al. <em>OpenTSLM: Time-Series Language Models for Reasoning over Multivariate Medical Text- and Time-Series Data.</em> 2026.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner"><div><strong>Advances in Multi-Modal Time Series</strong><span>ACML 2026 Tutorial · Melbourne, Australia</span></div><div class="footer-links"><a href="https://www.acml-conf.org/2026/" target="_blank" rel="noreferrer">ACML 2026 ↗</a><a href="#top">Back to top ↑</a></div></div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
